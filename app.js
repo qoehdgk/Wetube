@@ -3,13 +3,11 @@ import morgan from "morgan"; //log
 import helmet from "helmet"; //Security
 import cookieParser from "cookie-parser"; //Save User data to Cookie
 import bodyParser from "body-parser"; //Get Object from body
-import { userRouter } from "./router"; //Just const userRouter export
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
+import globalRouter from "./routers/globalRouter";
 
 const app = express();
-
-const handleHome = (req, res) => res.send("Hello from Mine");
-
-const handleProfile = (req, res) => res.send("You are on my profile");
 
 app.use(cookieParser()); //The Way Understand Cookie
 app.use(bodyParser.json({ extended: true }));
@@ -17,10 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true })); //The Way Server How to Unde
 app.use(helmet());
 app.use(morgan("dev"));
 
-app.get("/", handleHome);
-
-app.get("/profile", handleProfile);
-
+app.use("/", globalRouter);
 app.use("/user", userRouter); //if request User , Go userRouter /
+app.use("/video", videoRouter);
 
 export default app;
