@@ -18,5 +18,8 @@
   "homepage": "https://github.com/qoehdgk/Wetube#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
