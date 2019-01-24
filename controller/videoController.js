@@ -1,6 +1,8 @@
 export const home = (req, res) => res.render("home", { pageTitle: "Home" });
-export const search = (req, res) =>
+export const search = (req, res) => {
+  console.log(req.query);
   res.render("search", { pageTitle: "Search" });
+};
 export const upload = (req, res) =>
   res.render("upload", { pageTitle: "Upload" });
 export const videoDetail = (req, res) =>
