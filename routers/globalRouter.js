@@ -11,4 +11,7 @@ globalRouter.get(routes.join, join);
 globalRouter.get(routes.login, login);
 globalRouter.get(routes.logout, logout);
 
+//GET REQUEST 
+
+
 export default globalRouter;
