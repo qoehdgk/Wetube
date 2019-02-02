@@ -4,7 +4,7 @@ export const videos = [
         title: 'Video awesome',
         description: 'This is something I love',
         views: 24,
-        videoFile: "videofile.ogg",
+        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
         creator: {
             id: 121212,
             name:"Dongha",
@@ -16,7 +16,7 @@ export const videos = [
         title: 'Video shit',
         description: 'This is something I love',
         views: 24,
-        videoFile: "videofile.ogg",
+        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
         creator: {
             id: 121212,
             name:"Dongha",
@@ -28,7 +28,7 @@ export const videos = [
         title: 'Video Yes',
         description: 'This is something I love',
         views: 24,
-        videoFile: "videofile.ogg",
+        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
         creator: {
             id: 121212,
             name:"Dongha",
@@ -40,7 +40,7 @@ export const videos = [
         title: 'Video pe',
         description: 'This is something I love',
         views: 24,
-        videoFile: "videofile.ogg",
+        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
         creator: {
             id: 121212,
             name:"Dongha",
