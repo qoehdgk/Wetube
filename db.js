@@ -1,50 +1,19 @@
-export const videos = [
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+
+mongoose.connect(
+    process.env.MONGO_URL,
     {
-        id: 324393,
-        title: 'Video awesome',
-        description: 'This is something I love',
-        views: 24,
-        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
-        creator: {
-            id: 121212,
-            name:"Dongha",
-            email:"qoehdgk@gmail.com"
-        }
-    },
-    {
-        id: 232332,
-        title: 'Video shit',
-        description: 'This is something I love',
-        views: 24,
-        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
-        creator: {
-            id: 121212,
-            name:"Dongha",
-            email:"qoehdgk@gmail.com"
-        }
-    },
-    {
-        id: 444411,
-        title: 'Video Yes',
-        description: 'This is something I love',
-        views: 24,
-        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
-        creator: {
-            id: 121212,
-            name:"Dongha",
-            email:"qoehdgk@gmail.com"
-        }
-    },
-    {
-        id: 323333,
-        title: 'Video pe',
-        description: 'This is something I love',
-        views: 24,
-        videoFile: "http://techslides.com/demos/sample-videos/small.mp4",
-        creator: {
-            id: 121212,
-            name:"Dongha",
-            email:"qoehdgk@gmail.com"
-        }
+    useNewUrlParser: true,
+    useFindAndModify: false
     }
-]
+);
+
+const db = mongoose.connection;
+
+const handleOpen = () => console.log("Connected to DB");
+const handleError = error => console.log(`Error on DB Connection:${error}`);
+
+db.once("open",handleOpen);
+db.on("error",handleError);
